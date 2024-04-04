@@ -6,11 +6,14 @@ from sklearn import tree
 from scipy import sparse
 import matplotlib.pyplot as plt
 
+# PREDICT WHICH HEADLINES ARE REAL AND FAKE.
+
 # Read files
+# real.txt -> real news headlines
 real_dataset = pd.read_csv("real.txt", header=None, names=["Headline"])
 real_dataset["Label"] = 1
 
-
+# fake.txt -> fake news headlines
 fake_dataset = pd.read_csv("fake.txt", header=None, names=["Headline"])
 fake_dataset["Label"] = 0
 
